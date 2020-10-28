@@ -21,7 +21,7 @@
   padding: 5px;
   background-color: transparent;
   border: none;
-  @include border-bottom;
+  @include border-bottom($border-color);
 }
 
 .container {
@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 3%;
-    @include border-bottom;
+    @include border-bottom($border-color);
 
     .header-login {
       @extend %btn;

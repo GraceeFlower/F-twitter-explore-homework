@@ -12,6 +12,6 @@
   outline: $display;
 }
 
-@mixin border-bottom {
+@mixin border-bottom($border-color) {
   border-bottom: 1px solid $border-color;
 }
