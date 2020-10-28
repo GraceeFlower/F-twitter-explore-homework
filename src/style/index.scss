@@ -8,6 +8,20 @@
   border: 1px solid $primary-color;
   border-radius: 20px;
   color: $primary-color;
+  @include outline(none);
+}
+
+%register-btn {
+  @extend %btn;
+  background-color: $primary-color;
+  color: $white;
+}
+
+%form-input {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  @include border-bottom;
 }
 
 .container {
@@ -16,24 +30,60 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 3%;
-    border-bottom: 2px solid $border-color;
+    @include border-bottom;
 
     .header-login {
       @extend %btn;
     }
 
     .header-register {
-      @extend %btn;
-      background-color: $primary-color;
-      color: $white;
+      @extend %register-btn;
     }
   }
 
   .content {
+    padding: 100px 33% 0;
+
     .user-form {
       display: flex;
       flex-direction: column;
-      padding: 20px 20%;
+      padding: 60px;
+      @include border($border-color, $border-radius-base);
+
+      h2,
+      .sign-choice {
+        text-align: center;
+      }
+
+      .sign-choice {
+        margin: 10px;
+      }
+
+      h2 {
+        @include heading(1.5em);
+        margin-bottom: 20px;
+        color: $white;
+      }
+
+      input {
+        margin-bottom: 15px;
+        @extend %form-input;
+        @include outline(none);
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+
+      .login-btn {
+        @extend %btn;
+      }
+
+      .register-btn {
+        @extend %register-btn;
+      }
     }
   }
 }

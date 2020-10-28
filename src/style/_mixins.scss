@@ -2,3 +2,16 @@
   margin-top: 0;
   font-size: $font-size;
 }
+
+@mixin border($border-color, $border-radius) {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}
+
+@mixin outline($display) {
+  outline: $display;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $border-color;
+}
