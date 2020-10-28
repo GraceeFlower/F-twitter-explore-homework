@@ -1,3 +1,39 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+%btn {
+  padding: 3px 30px;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  color: $primary-color;
+}
+
+.container {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 3%;
+    border-bottom: 2px solid $border-color;
+
+    .header-login {
+      @extend %btn;
+    }
+
+    .header-register {
+      @extend %btn;
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  .content {
+    .user-form {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 20%;
+    }
+  }
+}
