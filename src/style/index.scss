@@ -21,7 +21,6 @@
   padding: 5px;
   background-color: transparent;
   border: none;
-  @include border-bottom($border-color);
 }
 
 .container {
@@ -41,7 +40,7 @@
     }
   }
 
-  .content {
+  .homepage-content {
     padding: 100px 33% 0;
 
     .user-form {
@@ -50,7 +49,7 @@
       padding: 60px;
       @include border($border-color, $border-radius-base);
 
-      h2,
+      .form-title,
       .sign-choice {
         text-align: center;
       }
@@ -59,19 +58,20 @@
         margin: 10px;
       }
 
-      h2 {
+      .form-title {
         @include heading(1.5em);
         margin-bottom: 20px;
         color: $white;
       }
 
-      input {
+      .username-input {
         margin-bottom: 15px;
         @extend %form-input;
         @include outline(none);
+        @include border-bottom($border-color);
       }
 
-      a {
+      .forget-password {
         color: $primary-color;
         text-decoration: none;
         margin-bottom: 10px;
